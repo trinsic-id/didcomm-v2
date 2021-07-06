@@ -388,3 +388,27 @@ python/trinsic_okapi.egg-info/
 python/okapi/trinsic_okapi.egg-info/
 python/pytest_junit.xml
 python/build/
+
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+*.bundle
+*.so
+*.o
+*.a
+mkmf.log
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+go/.idea/
