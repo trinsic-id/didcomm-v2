@@ -4,8 +4,7 @@ import (
 	"fmt"
 	"log"
 	"unsafe"
-	"github.com/golang/protobuf/proto"
-	pb "didcomm.org/grpc/messaging"
+	pb "proto"
 )
 
 /*
@@ -17,7 +16,7 @@ import "C"
 
 func main() {
 
-	generateKeyRequest := &pb.GenerateKeyRequest {
+	generateKeyRequest := pb.GenerateKeyRequest {
 		KeyType: pb.KeyType_ed25519,
 	}
 	fmt.Println(generateKeyRequest)

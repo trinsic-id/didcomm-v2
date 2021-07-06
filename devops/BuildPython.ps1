@@ -48,7 +48,6 @@ function Build-Package {
             Set-Python-Version($PackageVersion)
         }
     }finally {
-        
         python -m build --sdist --wheel --outdir dist/ .
     }
 }
