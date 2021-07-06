@@ -412,3 +412,4 @@ mkmf.log
 # Editor-based HTTP Client requests
 /httpRequests/
 go/.idea/
+ruby/.idea/
