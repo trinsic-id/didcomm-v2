@@ -1,6 +1,6 @@
 # Tools and libraries for managing digital identity
 
-This repo constains core components used in the Trinsic SDK
+This repo contains core components used in the Trinsic SDK
 
 - Support for working with `did:key` method
 - Implementation of DIDComm Messaging protocol for gRPC
@@ -13,7 +13,7 @@ Library is available for use with different languages
 
 ## Library and API structure
 
-The main library is built in Rust and exposed to other languages through a C-callable FFI. The function signatures for each method are exposed as byte arrays, that use Protobuf for the main IDL. This allows easy development and maintainance of new methods, with minimal language specific implementation.
+The main library is built in Rust and exposed to other languages through a C-callable FFI. The function signatures for each method are exposed as byte arrays, that use Protobuf for the main IDL. This allows easy development and maintenance of new methods, with minimal language specific implementation.
 
 All library methods are exposed via static method calls, generally grouped under a dedicated class in the `Okapi` namespace (where available).
 

@@ -63,14 +63,14 @@ In order to extend DIDComm Messaging for use with other protocols, we need to de
 
 ## Extension Architecture
 
-An important factor in driving DIDComm Messaging adoption is providing libraries for multiple languages. gRPC and Protobuf libraries are already highly available; this extensions provides the missing component in the secutiry layer and packs everything together.
+An important factor in driving DIDComm Messaging adoption is providing libraries for multiple languages. gRPC and Protobuf libraries are already highly available; this extension provides the missing component in the security layer and packs everything together.
 
 ![DIDComm gRPC Extension Architecture](images/didcomm-arch-diag.png "DIDComm gRPC Extension Architecture")
 
 ### Native Security Library
 
-This library is built in Rust and avaialble for all architectures. It supports the encryption and signing algorithms [defined](https://identity.foundation/didcomm-messaging/spec/#message-encryption) in the DIDComm Messaging spec. Additionally, it provides basic utility methods for working with `did:key` method, using `ed25519`, `x25519` and `p256` key types.
-This libary exposes all functionality through a simple foreign function interface (FFI). All functions exposed have the same method signature:
+This library is built in Rust and available for all architectures. It supports the encryption and signing algorithms [defined](https://identity.foundation/didcomm-messaging/spec/#message-encryption) in the DIDComm Messaging spec. Additionally, it provides basic utility methods for working with `did:key` method, using `ed25519`, `x25519` and `p256` key types.
+This library exposes all functionality through a simple foreign function interface (FFI). All functions exposed have the same method signature:
 
 ```rust
 pub extern "C" fn didcomm_pack(request: ByteBuffer,
@@ -127,7 +127,7 @@ var response = DIDComm.GenerateKey(request);
 
 ### Other Protocols
 
-This architecture is general enough that it can easily accomodate other protocols. For example, [Thrift](https://thrift.apache.org) and [Avro](https://avro.apache.org/docs/1.3.0/) take very similar approach to interface definitions and RPC service support; it would be fairly trivial to write plugin or separate extension to support them. While CBOR is schemaless serialization format, it can also be used in conjuction with any data modeling solution like [YANG](https://tools.ietf.org/html/draft-ietf-core-yang-cbor-13), though this is not required.
+This architecture is general enough that it can easily accomodate other protocols. For example, [Thrift](https://thrift.apache.org) and [Avro](https://avro.apache.org/docs/1.3.0/) take very similar approach to interface definitions and RPC service support; it would be fairly trivial to write a plugin or a separate extension to support them. While CBOR is a schemaless serialization format, it can also be used in conjunction with any data modeling solution like [YANG](https://tools.ietf.org/html/draft-ietf-core-yang-cbor-13), though this is not required.
 
 ## Data Contract Definition
 
@@ -150,7 +150,7 @@ The DIDComm spec defines the message structure using JWM message types. JWM mess
     "created_time": 1516269022,
     "expires_time": 1516385931,
     "body": {
-    	"messagespecificattribute": "and it's value"
+    	"messagespecificattribute": "and its value"
 	}
 }
 ```
